@@ -72,3 +72,6 @@ jobs:
           app-name: 'djangotestpy38'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_449FD070247D468D9CCAA68FAEC2043C }}
+      - name: Run database migrations
+        run: |
+          curl -X POST "https://djangotestpy38.azurewebsites.net/manage.py/migrate"
