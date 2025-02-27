@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-2#p9z0-d=39&qbu#&f1p6m=2+j!a4_n_r9q%wz192hfwva&24^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -26,8 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'azure_content.apps.AzureContentConfig', 
-    
+    'azure_content.apps.AzureContentConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -104,7 +104,7 @@ CRISPY_TEMPLATE_PACK ='bootstrap4'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('azure_content/static')),)
